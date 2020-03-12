@@ -1,0 +1,21 @@
+<div class="top-bar">
+  <h1>budget calculator</h1>
+</div>
+
+<section class="total-budget">
+  <h2>1500</h2>
+</section>
+
+<section class="add-item">
+  <div class="add-item-container">
+    <app-add-item-form 
+    style="padding: 20px;"
+    (formSubmit)="addItem($event)"
+    
+    ></app-add-item-form>
+  </div>
+</section>
+<hr>
+<app-budget-item-list [budgetItems]="budgetItems"
+(delete)="deleteItem($event)"
+></app-budget-item-list>
